@@ -91,44 +91,22 @@ body{
 }
 
 .parametro-senha__botao{
-    background-color: var(--fundo-texto);
-    color: var(--branco);
-    border: 2px solid var(--borda);
-    padding: 24px;
-    font-size: 24px;
-    cursor: pointer;
+
 }
-.label{
-    font-size: 20px;
+.parametro-senha__texto{
+
 }
-.checkbox{
-    width: 20px;
-    height: 20px;
-    cursor: pointer;
+
+@media screen and (min-width: 768px) {
+    .parametro-coluna__senha{
+        flex-direction: row;
+    }
 }
-.barra{
-    background-color: var(--fundo-senha);
-    height: 30px;
-    width: 100%;
-}
-.forca{
-    height: 30px;
-    position: relative;
-    bottom: 30px;
-}
-.fraca{
-    width: 25%;
-    background-color: #E71B32; 
-}
-.parametro-senha-textos{
-    display: flex;
-    justify-content: space-between;
-}
-.media{
-    background-color: #FAF408;
-    width: 50%;
-}
-.forte{
-    background-color: #00FF85;
-    width: 100%;
+
+.container{
+    width:90%;
+    max-width:700px;
+    background:rgba(255,255,255,.9);
+    padding:30px;
+    border-radius:15px;
 }

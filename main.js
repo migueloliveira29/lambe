@@ -1,28 +1,19 @@
-const numeroSenha = document.querySelector('.parametro-senha__texto');
-let tamanhoSenha = 12;
-numeroSenha.textContent = tamanhoSenha;
+const valor = document.getElementById("valor");
+const mais = document.getElementById("mais");
+const menos = document.getElementById("menos");
 
-const botoes = document.querySelectorAll('.parametro-senha__botao');
+let tamanho = 12;
 
-console.log(botoes)
-botoes[0].onclick = diminuiTamanho;
-function diminuiTamanho(){
-    tamanhoSenha = tamanhoSenha-1;
-    numeroSenha.textContent = tamanhoSenha;
-}
-botoes[0].onclick = diminuiTamanho;
-botoes[1].onclick = aumentaTamanho;
-function diminuiTamanho(){
-    if (tamanhoSenha > 1){
-       // tamanhoSenha = tamanhoSenha-1;
-        tamanhoSenha--;
+mais.addEventListener("click", () => {
+    if (tamanho < 50) {
+        tamanho++;
+        valor.textContent = tamanho;
     }
-    numeroSenha.textContent = tamanhoSenha;
-}
-function aumentaTamanho(){
-    if (tamanhoSenha < 20){
-       // tamanhoSenha = tamanhoSenha+1;
-       tamanhoSenha++;
+});
+
+menos.addEventListener("click", () => {
+    if (tamanho > 4) {
+        tamanho--;
+        valor.textContent = tamanho;
     }
-    numeroSenha.textContent = tamanhoSenha;
-}
+});
